@@ -1,0 +1,22 @@
+# Normalize line endings: LF in the repo for everyone (Windows, macOS, Linux)
+* text=auto eol=lf
+
+# Windows scripts must keep CRLF (e.g. gradlew.bat)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.mp3 binary
+*.ogg binary
+*.wav binary
+*.ttf binary
+*.otf binary
+*.jar binary
+*.keystore binary
+*.jks binary

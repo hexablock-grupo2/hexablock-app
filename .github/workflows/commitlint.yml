@@ -1,0 +1,34 @@
+# Validates that every commit in a pull request follows Conventional Commits.
+# Stack-agnostic: Node is only used inside CI, it is NOT added to the project.
+name: commitlint
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history to compare base..head)
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install commitlint (CI only, not saved)
+        run: npm install --no-save @commitlint/cli @commitlint/config-conventional
+
+      - name: Lint all commits of the pull request
+        run: >
+          npx commitlint
+          --from ${{ github.event.pull_request.base.sha }}
+          --to ${{ github.event.pull_request.head.sha }}
+          --verbose

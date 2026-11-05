@@ -27,7 +27,7 @@ Closes #
 - [ ] Unit tests added/updated: AAA structure, `should_X_when_Y` names
 - [ ] All commits follow Conventional Commits (English)
 - [ ] Docs updated if needed (README, diagrams in `/docs`, `docs/EXTENSIBILITY.md`, ADR)
-- [ ] If AI was used: entry added to `AI_USAGE.md` and the author can explain every line
+- [ ] If AI was used on logic, architecture, structure or tests: entry added to `AI_USAGE.md` and the author can explain every line
 
 ## How to test
 

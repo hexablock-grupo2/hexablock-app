@@ -38,7 +38,7 @@ Instructions for Claude Code. Loaded at the start of every session. Keep it shor
 - Run the tests and the linter before saying a task is done, and report the result honestly (including failures).
 - Commits: Conventional Commits in English (`feat(engine): ...`). Never push to `main`, never force-push.
 - If a request for non-trivial work is vague (missing goal, layer, acceptance criteria or scope), first restate it as a structured prompt in the format of `/refine-prompt`, mark inferences as `(inferido)`, and wait for approval. Never change its meaning.
-- After a significant AI-assisted task, remind the user to run `/ai-usage-entry`.
+- After an AI-assisted task on logic, architecture, project structure or tests, remind the user to run `/ai-usage-entry`. Queries and tooling setup need no entry.
 - If you are unsure or lack context, say so explicitly instead of guessing.
 
 ## Where things live

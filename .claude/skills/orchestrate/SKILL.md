@@ -35,7 +35,7 @@ CLAUDE.md and CONTRIBUTING.md apply and win over this file. Talk to the team in 
 6. **Integrate and verify.** Bring the units together on the feature branch, then run the full test and lint commands from CLAUDE.md yourself. Do not rely on developer reports for this.
 7. **Audit.** Send a fresh `quality-control` agent, not the one that planned the tests, in AUDIT mode the changed files, the plan path and the test and lint results.
 8. **Decide.** For each finding choose fix or accept, with a one-line reason. Fix blockers, unless the team agrees otherwise. Fix others only when the value is worth the extra work. If anything is being fixed, return to step 5 with only those items, then re-audit only what changed.
-9. **Close.** Update the ledger, then give the team a short summary in Spanish: what changed, test results, accepted findings, the models used, and the design decisions they must be able to defend orally. Remind them to run `/ai-usage-entry`.
+9. **Close.** Update the ledger, then give the team a short summary in Spanish: what changed, test results, accepted findings, the models used, and the design decisions they must be able to defend orally. Then draft the `AI_USAGE.md` entries.
 
 **Stop after 3 fix cycles** on the same plan and ask the team how to proceed.
 
@@ -48,6 +48,18 @@ CLAUDE.md and CONTRIBUTING.md apply and win over this file. Talk to the team in 
 - Use one agent per unit. Fix through `SendMessage` to the same developer when it still has useful context.
 - Do not start an agent for something you can check with one or two tool calls.
 - Do not redo work a sub-agent already reported unless the report looks wrong.
+
+## AI usage log
+
+Document each work unit as its own entry in section 2 of `AI_USAGE.md`, following that file's template and scope note. For this work it replaces the `/ai-usage-entry` reminder.
+
+- Base each entry only on what actually happened. Never invent anything.
+- **Tool and model:** every agent that collaborated on the unit, each with its role and model (for example, `developer` on `sonnet` to implement, `quality-control` on `sonnet` to plan tests and audit), including you and any built-in agents.
+- **Prompt:** the unit's brief, literal or as a faithful paraphrase. If the request went through `/refine-prompt`, record both the original and the refined version, labelled.
+- **Modifications made by the team** and **Lessons learned / limitations found:** leave as `TODO(team): ...` with one guiding question each. Only the team writes these.
+- Skip units outside the scope note, such as tooling setup.
+- You write the entries, not the developers, so parallel work does not conflict in the file.
+- Show the team the drafts first. Append them in chronological order only after they confirm.
 
 ## Performance ledger
 

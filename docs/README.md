@@ -3,9 +3,13 @@
 | Path | Content | Required by the statement? |
 | --- | --- | --- |
 | `adr/` | Architecture Decision Records (one file per decision, numbered) | No (strongly recommended) |
+| `EXTENSIBILITY.md` | How to add a fifth variant and swap an infrastructure adapter | Yes (§3.1) |
+| `SCORING.md` | Scoring criteria per variant | Yes (§5.1.6) |
 | `diagrams/src/` | Editable diagram sources (`.puml` / `.drawio`) | Yes (§4) |
 | `diagrams/img/` | Exported high-resolution images, embedded in the README | Yes (§4) |
 | `specs/` | Behaviour specs / use cases that drive implementation and tests | No (recommended, see class material on Spec-Driven Development) |
+
+Expected diagrams: `class-diagram`, `clean-architecture-layers`, `extensibility-diagram`.
 
 Diagram conventions:
 

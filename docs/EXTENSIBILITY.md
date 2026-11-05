@@ -41,3 +41,16 @@
 | New board size / shape | TODO | TODO |
 | Different scoring policy | TODO | TODO |
 | New piece shape | TODO | TODO |
+
+## Swapping an infrastructure adapter
+
+Any infrastructure piece must be replaceable without the inner layers noticing. Each swap creates a new adapter for an existing port and changes only the composition root or configuration.
+
+| Piece | Port | Current adapter | Files to create | Files to change |
+| --- | --- | --- | --- | --- |
+| Local database | TODO | TODO | TODO | TODO |
+| Remote API client | TODO | TODO | TODO | TODO |
+| Audio | TODO | TODO | TODO | TODO |
+| Level source | TODO | TODO | TODO | TODO |
+
+The port's contract test suite must pass against the new adapter before the swap counts as done.

@@ -31,6 +31,7 @@ Instructions for Claude Code. Loaded at the start of every session. Keep it shor
 
 ## How to work
 
+- Main session: for any development task, load the `orchestrate` skill first.
 - **Plan first.** For anything non-trivial, propose the design (interfaces, responsibilities, layer, files) and wait for confirmation before writing code.
 - Small, reviewable diffs. Do not touch files unrelated to the task.
 - Do **not** add dependencies, change the folder structure or modify CI without asking.

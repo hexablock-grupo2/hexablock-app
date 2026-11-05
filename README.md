@@ -1,7 +1,6 @@
 # HexaBlock Suite — Game Client
 
-<!-- Badges: replace OWNER/REPO once the repo exists. CI badge appears after the first workflow run. -->
-![commitlint](https://github.com/OWNER/REPO/actions/workflows/commitlint.yml/badge.svg)
+[![commitlint](https://github.com/hexablock-grupo2/hexablock-app/actions/workflows/commitlint.yml/badge.svg?event=pull_request)](https://github.com/hexablock-grupo2/hexablock-app/actions/workflows/commitlint.yml)
 <!-- TODO: build/test badge, test types badges, license badge -->
 
 > Four hexagonal puzzle games — Hexa Lines, Hexa Fit, Hexa Sort, Hexa Merge — built on **one generic engine**.

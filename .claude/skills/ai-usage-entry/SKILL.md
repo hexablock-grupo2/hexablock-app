@@ -15,3 +15,4 @@ Rules:
 4. If the session produced several unrelated tasks, propose one entry per task.
 5. Show the draft to the user first. Only append it to `AI_USAGE.md` (at the end of section 2, chronological order) after the user confirms.
 6. Write the entry in English.
+7. Only log work on logic, architecture, project structure or tests (see the scope note in `AI_USAGE.md`). If the session was only queries or tooling setup, say that no entry is needed and stop.

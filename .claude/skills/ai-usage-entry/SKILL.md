@@ -16,3 +16,4 @@ Rules:
 5. Show the draft to the user first. Only append it to `AI_USAGE.md` (at the end of section 2, chronological order) after the user confirms.
 6. Write the entry in English.
 7. Only log work on logic, architecture, project structure or tests (see the scope note in `AI_USAGE.md`). If the session was only queries or tooling setup, say that no entry is needed and stop.
+8. **Used by** (section 1): the GitHub username of the person running the session, from `gh api user --jq .login`. If you cannot get it, ask. Never guess. Add the username to the row for the tool used, and add a row if the tool is not listed. Show this change with the draft and apply it only after the user confirms.

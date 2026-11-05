@@ -31,12 +31,15 @@ Instructions for Claude Code. Loaded at the start of every session. Keep it shor
 
 ## How to work
 
+- **Every agent must follow the project rules.** This applies to every session and sub-agent, now and in the future: this file, `CONTRIBUTING.md`, `commitlint.config.mjs` and `.github/pull_request_template.md`. When briefing an agent that skips this file, include the rules it needs.
+- Main session: for any development task, load the `orchestrate` skill first.
 - **Plan first.** For anything non-trivial, propose the design (interfaces, responsibilities, layer, files) and wait for confirmation before writing code.
 - Small, reviewable diffs. Do not touch files unrelated to the task.
 - Do **not** add dependencies, change the folder structure or modify CI without asking.
 - Every code change comes with tests: **AAA** structure, names `should_<expected>_when_<condition>`, engine tested with a **fake cell type**, randomness injected with a **fixed seed**. Test behaviour, not implementation details.
 - Run the tests and the linter before saying a task is done, and report the result honestly (including failures).
 - Commits: Conventional Commits in English (`feat(engine): ...`). Never push to `main`, never force-push.
+- Before any push, PR or merge, check the work against `CONTRIBUTING.md`, `commitlint.config.mjs` and `.github/pull_request_template.md`. Fill in every section of the PR template, and mark items that do not apply.
 - If a request for non-trivial work is vague (missing goal, layer, acceptance criteria or scope), first restate it as a structured prompt in the format of `/refine-prompt`, mark inferences as `(inferido)`, and wait for approval. Never change its meaning.
 - After an AI-assisted task on logic, architecture, project structure or tests, remind the user to run `/ai-usage-entry`. Queries and tooling setup need no entry.
 - If you are unsure or lack context, say so explicitly instead of guessing.

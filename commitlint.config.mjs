@@ -3,6 +3,9 @@
 // Adjust the list when the folder structure is agreed.
 export default {
   extends: ['@commitlint/config-conventional'],
+  // Dependabot writes "ci: Bump ..." (sentence-case subject) and always adds this
+  // sign-off trailer, so its commits are skipped instead of failing every update PR.
+  ignores: [(message) => /^Signed-off-by: dependabot\[bot\]/m.test(message)],
   rules: {
     'scope-enum': [
       1,

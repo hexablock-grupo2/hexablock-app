@@ -31,6 +31,7 @@ Instructions for Claude Code. Loaded at the start of every session. Keep it shor
 
 ## How to work
 
+- **Every agent must follow the project rules.** This applies to every session and sub-agent, now and in the future: this file, `CONTRIBUTING.md`, `commitlint.config.mjs` and `.github/pull_request_template.md`. When briefing an agent that skips this file, include the rules it needs.
 - Main session: for any development task, load the `orchestrate` skill first.
 - **Plan first.** For anything non-trivial, propose the design (interfaces, responsibilities, layer, files) and wait for confirmation before writing code.
 - Small, reviewable diffs. Do not touch files unrelated to the task.

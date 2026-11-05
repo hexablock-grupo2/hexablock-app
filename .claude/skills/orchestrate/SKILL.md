@@ -53,6 +53,9 @@ CLAUDE.md and CONTRIBUTING.md apply and win over this file. Talk to the team in 
 
 Document each work unit as its own entry in section 2 of `AI_USAGE.md`, following that file's template and scope note. For this work it replaces the `/ai-usage-entry` reminder.
 
+**Check the file first.** Before drafting, read the current `AI_USAGE.md`. Its sections can change. If they no longer match this section, follow the file, update this section to match in the same branch, and tell the team the other repo needs the same change.
+
+- **Used by** (section 1): the GitHub username of the person running the session, from `gh api user --jq .login`. If you cannot get it, ask. Never guess. Add the username to the row for the tool used, and add a row if the tool is not listed.
 - Base each entry only on what actually happened. Never invent anything.
 - **Tool and model:** every agent that collaborated on the unit, each with its role and model (for example, `developer` on `sonnet` to implement, `quality-control` on `sonnet` to plan tests and audit), including you and any built-in agents.
 - **Prompt:** the unit's brief, literal or as a faithful paraphrase. If the request went through `/refine-prompt`, record both the original and the refined version, labelled.
